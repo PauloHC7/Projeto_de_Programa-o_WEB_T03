@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #16a085;
+    --accent-color: #3498db;
+    --bg-color: #f4f7f6;
+    --text-color: #333333;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    border: 3px solid var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.header-text h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.header-text p {
+    color: #bdc3c7;
+    font-size: 1.1rem;
+}
+
+nav {
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 1.2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+.layout-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 3rem auto;
+    gap: 2.5rem;
+    padding: 0 2rem;
+    flex: 1;
+}
+
+main {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+section h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--bg-color);
+    padding-bottom: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+article {
+    background-color: var(--bg-color);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--accent-color);
+    position: relative;
+}
+
+.category-badge {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+article h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.publish-date {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 1.5rem;
+}
+
+.btn-read {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-read:hover {
+    background-color: #2980b9;
+}
+
+aside {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sidebar-widget {
+    background-color: #e8f8f5;
+    padding: 1.8rem;
+    border-radius: 10px;
+    border-top: 4px solid var(--secondary-color);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.sidebar-widget h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.tag-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.tag-list a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: color 0.3s, padding-left 0.3s;
+}
+
+.tag-list a:hover {
+    color: var(--secondary-color);
+    padding-left: 5px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+}
+
+.footer-content p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+    color: #bdc3c7;
+}
+
+@media (max-width: 850px) {
+    .layout-container {
+        flex-direction: column;
+    }
+    
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+}
